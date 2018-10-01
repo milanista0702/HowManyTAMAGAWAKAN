@@ -8,6 +8,15 @@
 
 import UIKit
 
-class Units {
-
+class Units: NSObject {
+    var name: String
+    var prise: Int
+    
+    init(name: String, prise: Int) {
+        self.name = name
+        self.prise = prise
+    }
+    
+    
+    
 }

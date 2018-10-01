@@ -117,9 +117,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZV-oN-9Ae">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="edit" id="xXy-pK-eNz"/>
-                                </items>
+                                <items/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,6 +132,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="Boe-jr-WNr" id="FNL-HR-cad"/>
+                        <outlet property="toolbar" destination="tZV-oN-9Ae" id="TtU-TD-1Ud"/>
                         <segue destination="KgG-1p-WdK" kind="push" identifier="tonew" id="HJs-me-O2n"/>
                     </connections>
                 </viewController>
@@ -178,11 +177,21 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="okWith_sender:" destination="KgG-1p-WdK" eventType="touchUpInside" id="bNJ-vH-fJE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UNIT NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqS-IJ-2fM">
                                 <rect key="frame" x="63" y="150" width="120" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-bn-ivo">
+                                <rect key="frame" x="63" y="312" width="120" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -191,6 +200,10 @@
                         <viewLayoutGuide key="safeArea" id="8Ew-Yb-1cn"/>
                     </view>
                     <navigationItem key="navigationItem" title="NEW UNIT" id="fGd-WS-Pow"/>
+                    <connections>
+                        <outlet property="moneytext" destination="tLs-ZR-ezT" id="S60-QV-XEK"/>
+                        <outlet property="nametext" destination="usx-hc-SXy" id="LoK-oO-I6U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xQ-1q-j9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

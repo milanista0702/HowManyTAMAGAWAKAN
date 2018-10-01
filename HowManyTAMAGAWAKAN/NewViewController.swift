@@ -9,10 +9,17 @@
 import UIKit
 
 class NewViewController: UIViewController {
-
+    
+    @IBOutlet var nametext: UITextField!
+    @IBOutlet var moneytext: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.moneytext.keyboardType = UIKeyboardType.numberPad
+    }
+    
+    @IBAction func ok(_sender: UIButton) {
         
     }
     
